@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7dedef5;
+}
+
+li {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.2em;
+    list-style: none;
+    margin-right: 25px;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+li > a {
+    font-weight: bolder;
+}
+
+li > a:hover {
+    border-bottom: 2px solid #fff;
+    opacity: 70%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header {
+    align-items: center;
+    background-color: rgba(6, 61, 144, 0.9);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+h1,
+h2 {
+    color: #fff;
+    margin: 0;
+}
+
+.section-buscador--titulo {
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+header > nav > ul > li > a {
+    color: #fff;
+}
+
+/*************************/
+/*      Body - Image     */
+/*************************/
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgb(178, 238, 245));
+    min-height: 100vh;
+}
+
+/*************************/
+/*     Form - Search     */
+/*************************/
+
+#form-search {
+    background-color: #004284df;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#form-search > h2 {
+    color: rgb(250, 255, 255);
+    font-size: 1.3rem;
+    padding: 0 10px 0 5px;
+}
+
+#form-search > input {
+    border: 0.2rem solid rgba(99, 97, 97, 0.904);
+    border-radius: 0.8rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.8rem;
+    width: 15rem;
+}
+
+#form-search > button {
+    background-color: #03565600;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    padding: 0.35rem 0.5rem;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.sin-registros {
+    display: none;
+    font-weight: bold;
+}
+
+.table {
+    margin: 1em 0;
+    min-width: 300px;
+
+    tr {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        display: block;
+
+        &:first-child {
+            padding-top: 0.5em;
+        }
+        &:last-child {
+            padding-bottom: 0.5em;
+        }
+
+        &:before {
+            content: attr(data-th) ': ';
+            font-weight: bold;
+
+            width: 6.5em;
+            display: inline-block;
+        }
+    }
+
+    th,
+    td {
+        text-align: left;
+
+        @media (min-width: 480px) {
+            display: table-cell;
+            padding: 0.25em 0.5em;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.table {
+    background-color: #004284df;
+    color: #fff;
+    border-radius: 0.4em;
+    overflow: hidden;
+}
+
+th,
+td:before {
+    color: rgb(46, 248, 255);
+    border-bottom: 2px solid #fff;
+}
+
+/*************************/
+/*    Section - Table    */
+/*************************/
+.section-main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-listado {
+    padding: 0 0 50px 0;
+    text-align: center;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #b9f6f6ab;
+}
+
+table {
+    width: 100%;
+}
+
+th,
+td {
+    width: 25%;
+    text-align: left;
+}
+
+td {
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+.btn-table {
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    padding: 5px 10px;
+}
+
+.btn-refresh {
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    padding: 5px 10px;
+    font-size: 1.5em;
+    background-color: #03565600;
+}
+
+.btn-id {
+    background-color: #06a7a7;
+}
+
+.btn-modificar {
+    margin: 2px;
+    background-color: #146cf1;
+}
+
+.btn-eliminar {
+    margin: 2px;
+    background-color: #f11426;
+}
+
+.btn-agregar {
+    background-color: #004284df;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    margin-top: 10px;
+    padding: 8px 10px;
+}
+
+.btn-agregar > a {
+    color: #fff;
+}
+
+/*************************/
+/*      Formulario       */
+/*************************/
+.section-form {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.form-complete {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-complete > input {
+    border: 0.2rem solid rgba(99, 97, 97, 0.904);
+    border-radius: 0.8rem;
+    margin: 0.5rem 0;
+    padding: 0.8rem 1rem;
+    width: 18rem;
+}
+
+.form-complete > select {
+    border: 0.2rem solid rgba(99, 97, 97, 0.904);
+    border-radius: 0.8rem;
+    margin: 0.5rem 0;
+    padding: 0.8rem 1rem;
+    width: 18rem;
+}
+
+.form-complete > button {
+    background-color: rgb(12, 113, 245);
+    border: none;
+    border-radius: 0.8rem;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0.8rem 0 0 0;
+    padding: 0.8rem 1rem;
+    width: 18rem;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.error {
+    font-weight: bolder;
+    margin-top: 0;
+    color: #f11426;
+}
+
+#response-agregar--odontologo,
+#response-modificar--odontologo,
+#response-modificar--paciente,
+#response-agregar--paciente,
+#response-modificar--turno,
+#response-agregar--turno {
+    display: none;
+    padding: 10px;
+    background-color: #d4adad;
+}
+
+#form-agregar--exitoso,
+#form-modificar--exitoso {
+    display: none;
+    background-color: #06f67a;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.form-modificar--odontologo {
+    display: none;
+}
+
+.form-agregar--odontologo {
+    display: none;
+}
+
+.form-modificar--paciente {
+    display: none;
+}
+
+.form-agregar--paciente {
+    display: none;
+}
+
+.form-modificar--turno {
+    display: none;
+}
+
+.form-agregar--turno {
+    display: none;
+}
+
+.col-oculta {
+    display: none;
+}
+
+/*************************/
+/*        Footer         */
+/*************************/
+
+footer {
+    align-items: center;
+    background-color: rgba(2, 69, 102, 0.9);
+    display: flex;
+    justify-content: center;
+}
+
+footer > p {
+    color: #fff;
+    font-weight: bold;
+}

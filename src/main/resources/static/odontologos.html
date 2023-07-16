@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Odontologos</title>
+        <link rel="stylesheet" href="./css/odontologos_pacientes_turnos.css" />
+    </head>
+    <body>
+        <header id="header">
+            <h1>Odontologos 🧑🏼‍⚕️</h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./pacientes.html">Pacientes</a></li>
+                    <li><a href="./turnos.html">Turnos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="section-main" class="section-main">
+            <article class="section-listado">
+                <form id="form-search" action="#">
+                    <h2 class="section-buscador--titulo">
+                        Buscar Odontologos:
+                    </h2>
+                    <input
+                        type="search"
+                        class="input-search--odontologos"
+                        placeholder="Ingrese Nombre, Apellido o dni..."
+                    />
+                    <button id="btn-search--odontologos" type="button">
+                        🔍
+                    </button>
+                </form>
+
+                <p class="sin-registros"></p>
+
+                <table id="odontologos-tabla" class="table">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Matricula</th>
+                        <th>
+                            <button
+                                class="btn-refresh btn-refresh--odontologos"
+                            >
+                                🔄️
+                            </button>
+                        </th>
+                    </tr>
+                    <hr />
+                    <tbody class="tbody"></tbody>
+                </table>
+
+                <button class="btn-agregar btn-agregar--odontologo">
+                    <a href="#agregar-odontologo">Agregar Odontologo</a>
+                </button>
+            </article>
+        </section>
+
+        <section
+            id="modificar-odontologo"
+            class="section-form form-modificar--odontologo"
+        >
+            <h2>Modificar Odontologo</h2>
+
+            <form class="modificar-form--odontologo form-complete">
+                <label for="id">Id:</label>
+                <input type="text" class="inputId" readonly />
+
+                <label>Nombre:</label>
+                <input
+                    type="text"
+                    placeholder="Nombre"
+                    class="input-nombre--modificarOdontologo"
+                />
+
+                <label>Apellido:</label>
+                <input
+                    type="text"
+                    placeholder="Apellido"
+                    class="input-apellido--modificarOdontologo"
+                />
+
+                <label>Matricula:</label>
+                <input
+                    type="text"
+                    placeholder="Matricula"
+                    class="input-matricula--modificarOdontologo"
+                />
+
+                <button class="btn-form--modificarOdontologo">Modificar</button>
+            </form>
+            <div id="response-modificar--odontologo"></div>
+            <div id="form-modificar--exitoso"></div>
+        </section>
+
+        <section
+            id="agregar-odontologo"
+            class="section-form form-agregar--odontologo"
+        >
+            <h2>Agregar Odontologo</h2>
+
+            <form class="agregar-form--odontologo form-complete">
+                <label>Nombre:</label>
+                <input
+                    class="input-nombre--agregarOdontologo"
+                    type="text"
+                    placeholder="Nombre"
+                />
+
+                <label>Apellido:</label>
+                <input
+                    type="text"
+                    placeholder="Apellido"
+                    class="input-apellido--agregarOdontologo"
+                />
+
+                <label>Matricula:</label>
+                <input
+                    type="text"
+                    placeholder="Matricula"
+                    class="input-matricula--agregarOdontologo"
+                />
+
+                <button class="btn-form--agregarOdontologo">Agregar</button>
+            </form>
+            <div id="response-agregar--odontologo"></div>
+            <div id="form-agregar--exitoso"></div>
+        </section>
+
+        <footer>
+            <p>Trabajo Integrador - Clinica Odontologica - Backend I</p>
+        </footer>
+
+        <script src="./js/selectoresOdontologos.js"></script>
+        <script src="./js/validacionesTablas.js"></script>
+        <script src="./js/renderizarRegistrosEnTabla.js"></script>
+        <script src="./js/validacionesForm.js"></script>
+        <script src="./js/odontologos.js"></script>
+    </body>
+</html>

@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7dedef5;
+}
+
+/*************************/
+/*       Header          */
+/*************************/
+
+a {
+    color: #222;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 2px solid #fff;
+    opacity: 70%;
+}
+
+header {
+    align-items: center;
+    background-color: rgba(6, 61, 144, 0.9);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+h1,
+h2 {
+    margin: 0;
+    color: #ffffff;
+}
+
+/*************************/
+/*      Body - Image     */
+/*************************/
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+        url('../assets/patron.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/*************************/
+/*       Section         */
+/*************************/
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.container {
+    width: 350px;
+    height: 400px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+}
+
+.container:hover {
+    cursor: pointer;
+    opacity: 98%;
+    transform: scale(1.05);
+}
+
+.container > h3 {
+    color: #000;
+    font-size: 2.1em;
+    text-align: end;
+    padding-right: 20px;
+}
+
+.odontologo {
+    background-image: url('../assets/odontologos.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.paciente {
+    background-image: url('../assets/paciente.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.turno {
+    background-image: url('../assets/calendario.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*************************/
+/*        Footer         */
+/*************************/
+footer {
+    align-items: center;
+    background-color: rgba(2, 69, 102, 0.9);
+    display: flex;
+    justify-content: center;
+}
+
+footer > p {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/*************************/
+/*       Responsive      */
+/*************************/
+@media screen and (max-width: 405px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .container {
+        min-width: 100px;
+        min-height: 150px;
+        max-width: 300px;
+        max-height: 350px;
+    }
+
+    footer > p {
+        font-size: 0.8em;
+        text-align: center;
+        padding: 2px;
+    }
+}

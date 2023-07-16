@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Pacientes</title>
+        <link rel="stylesheet" href="./css/odontologos_pacientes_turnos.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Pacientes 🙋🏼‍♂️🙋🏼‍♀️</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./odontologos.html">Odontologos</a></li>
+                    <li><a href="./turnos.html">Turnos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="section-main">
+            <article class="section-listado">
+                <form id="form-search" action="#">
+                    <h2 class="section-buscador--titulo">Buscar Pacientes:</h2>
+                    <input
+                        type="search"
+                        class="input-search--pacientes"
+                        placeholder="Ingrese Nombre, Apellido o dni..."
+                    />
+                    <button id="btn-search--pacientes" type="button">🔍</button>
+                </form>
+
+                <p class="sin-registros"></p>
+
+                <table id="pacientes-tabla" class="table">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>dni</th>
+                        <th>Fecha Ingreso</th>
+                        <th>Id_domicilio</th>
+                        <th>Calle</th>
+                        <th>Numero</th>
+                        <th>Localidad</th>
+                        <th>
+                            <button class="btn-refresh btn-refresh--pacientes">
+                                🔄️
+                            </button>
+                        </th>
+                    </tr>
+                    <hr />
+                    <tbody class="tbody"></tbody>
+                </table>
+
+                <button class="btn-agregar btn-agregar--paciente">
+                    <a href="#agregar-paciente">Agregar Paciente</a>
+                </button>
+            </article>
+        </section>
+
+        <section
+            id="modificar-paciente"
+            class="section-form form-modificar--paciente"
+        >
+            <h2>Modificar Paciente</h2>
+
+            <form class="modificar-form--paciente form-complete">
+                <h3>Datos Personales</h3>
+                <label>Id:</label>
+                <input type="text" class="inputId" readonly />
+
+                <label>Nombre:</label>
+                <input
+                    type="text"
+                    placeholder="Nombre"
+                    class="input-nombre--modificarPaciente"
+                />
+
+                <label>Apellido:</label>
+                <input
+                    type="text"
+                    placeholder="Apellido"
+                    class="input-apellido--modificarPaciente"
+                />
+
+                <label>Dni:</label>
+                <input
+                    type="text"
+                    placeholder="Dni"
+                    class="input-dni--modificarPaciente"
+                />
+
+                <label>Fecha de Ingreso:</label>
+                <input
+                    type="date"
+                    placeholder="Fecha de Ingreso"
+                    class="input-fechaIngreso--modificarPaciente"
+                />
+
+                <h3>Domicilio</h3>
+
+                <label>Domicilio Id:</label>
+                <input
+                    type="text"
+                    placeholder="Domicilio Id"
+                    class="input-domicilioId--modificarPaciente"
+                    readonly
+                />
+
+                <label>Calle:</label>
+                <input
+                    type="text"
+                    placeholder="Calle"
+                    class="input-calle--modificarPaciente"
+                />
+
+                <label>Numero:</label>
+                <input
+                    type="number"
+                    placeholder="Numero"
+                    class="input-numero--modificarPaciente"
+                />
+
+                <label>Localidad:</label>
+                <input
+                    type="text"
+                    placeholder="Localidad"
+                    class="input-localidad--modificarPaciente"
+                />
+
+                <button class="btn-form--modificarPaciente">Modificar</button>
+            </form>
+            <div id="response-modificar--paciente"></div>
+            <div id="form-modificar--exitoso"></div>
+        </section>
+
+        <section
+            id="agregar-paciente"
+            class="section-form form-agregar--paciente"
+        >
+            <h2>Agregar Paciente</h2>
+
+            <form class="agregar-form--paciente form-complete">
+                <h3>Datos Personales</h3>
+                <label>Nombre:</label>
+                <input
+                    type="text"
+                    placeholder="Nombre"
+                    class="input-nombre--agregarPaciente"
+                />
+
+                <label>Apellido:</label>
+                <input
+                    type="text"
+                    placeholder="Apellido"
+                    class="input-apellido--agregarPaciente"
+                />
+
+                <label>Dni:</label>
+                <input
+                    type="text"
+                    placeholder="Dni"
+                    class="input-dni--agregarPaciente"
+                />
+
+                <label>Fecha de Ingreso:</label>
+                <input
+                    type="date"
+                    placeholder="Fecha de Ingreso"
+                    class="input-fechaIngreso--agregarPaciente"
+                />
+
+                <h3>Domicilio</h3>
+
+                <label>Calle:</label>
+                <input
+                    type="text"
+                    placeholder="Calle"
+                    class="input-calle--agregarPaciente"
+                />
+
+                <label>Numero:</label>
+                <input
+                    type="number"
+                    placeholder="Numero"
+                    class="input-numero--agregarPaciente"
+                />
+
+                <label>Localidad:</label>
+                <input
+                    type="text"
+                    placeholder="Localidad"
+                    class="input-localidad--agregarPaciente"
+                />
+
+                <button class="btn-form--agregarPaciente">Agregar</button>
+            </form>
+            <div id="response-agregar--paciente"></div>
+            <div id="form-agregar--exitoso"></div>
+        </section>
+
+        <footer>
+            <p>Trabajo Integrador - Clinica Odontologica - Backend I</p>
+        </footer>
+
+        <script src="./js/selectoresPacientes.js"></script>
+        <script src="./js/validacionesTablas.js"></script>
+        <script src="./js/renderizarRegistrosEnTabla.js"></script>
+        <script src="./js/validacionesForm.js"></script>
+        <script src="./js/pacientes.js"></script>
+    </body>
+</html>

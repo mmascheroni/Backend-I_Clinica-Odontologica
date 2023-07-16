@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Turnos</title>
+        <link rel="stylesheet" href="./css/odontologos_pacientes_turnos.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Turnos 📆</h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./odontologos.html">Odontologos</a></li>
+                    <li><a href="./pacientes.html">Pacientes</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="section-main">
+            <article class="section-listado">
+                <form id="form-search" action="#">
+                    <h2 class="section-buscador--titulo">Buscar Turnos:</h2>
+                    <input
+                        type="search"
+                        class="input-search--turnos"
+                        placeholder="Ingrese Nombre, Apellido o dni..."
+                    />
+                    <button id="btn-search--turnos" type="button">🔍</button>
+                </form>
+
+                <p class="sin-registros"></p>
+
+                <table id="turnos-tabla" class="table">
+                    <tr>
+                        <th>Id</th>
+                        <th>Paciente</th>
+                        <th>Odontologo</th>
+                        <th>Fecha y Hora</th>
+                        <th>
+                            <button class="btn-refresh btn-refresh--turnos">
+                                🔄️
+                            </button>
+                        </th>
+                    </tr>
+                    <hr />
+                    <tbody class="tbody"></tbody>
+                </table>
+
+                <button class="btn-agregar btn-agregar--turno">
+                    <a href="#agregar-turno">Agregar Turno</a>
+                </button>
+            </article>
+        </section>
+
+        <section class="section-form form-modificar--turno">
+            <h2>Modificar Turno</h2>
+
+            <form
+                id="modificar-turno"
+                class="form-turno--modificar form-complete"
+            >
+                <label for="id">Id:</label>
+                <input type="text" id="id-form-modificar" readonly />
+
+                <label for="paciente">Seleccionar Paciente:</label>
+                <select
+                    id="pacienteModificar"
+                    class="input-paciente--modificarTurno"
+                ></select>
+
+                <label for="odontologo">Seleccionar Odontologo:</label>
+                <select
+                    id="odontologoModificar"
+                    class="input-odontologo--modificarTurno"
+                ></select>
+
+                <label for="fecha-hora">Selecciona una fecha y hora:</label>
+                <input
+                    type="datetime-local"
+                    id="fecha-hora"
+                    class="input-fechaYHora--modificarTurno"
+                />
+
+                <button class="btn-form--modificarTurno">Modificar</button>
+            </form>
+            <div id="response-modificar--turno"></div>
+            <div id="form-modificar--exitoso"></div>
+        </section>
+
+        <section id="agregar-turno" class="section-form form-agregar--turno">
+            <h2>Agregar Turno</h2>
+
+            <form class="form-turno--agregar form-complete">
+                <label for="pacienteAgregar">Seleccionar Paciente:</label>
+                <select
+                    id="pacienteAgregar"
+                    class="input-paciente--agregarTurno"
+                ></select>
+
+                <label for="odontologoAgregar">Seleccionar Odontologo:</label>
+                <select
+                    id="odontologoAgregar"
+                    class="input-odontologo--agregarTurno"
+                ></select>
+
+                <label for="fecha-hora">Selecciona una fecha y hora:</label>
+                <input
+                    type="datetime-local"
+                    id="fecha-hora"
+                    class="input-fechaYHora--agregarTurno"
+                />
+
+                <button class="btn-form--agregarTurno">Agregar</button>
+            </form>
+            <div id="response-agregar--turno"></div>
+            <div id="form-agregar--exitoso"></div>
+        </section>
+
+        <footer>
+            <p>Trabajo Integrador - Clinica Odontologica - Backend I</p>
+        </footer>
+
+        <script src="./js/selectoresTurnos.js"></script>
+        <script src="./js/validacionesTablas.js"></script>
+        <script src="./js/renderizarRegistrosEnTabla.js"></script>
+        <script src="./js/validacionesForm.js"></script>
+        <script src="./js/turnos.js"></script>
+    </body>
+</html>
